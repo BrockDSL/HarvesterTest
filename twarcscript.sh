@@ -1,3 +1,3 @@
 #! /bin/sh.
 
-lsb_release -a
+echo hello-world
