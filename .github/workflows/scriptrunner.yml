@@ -17,4 +17,4 @@ jobs:
       - name: Run the script
         run: |
           chmod -R 777 .
-          ./twarcscript.sh
+          ls
