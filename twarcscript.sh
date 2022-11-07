@@ -1,1 +1,1 @@
-python -h
+echo "Hello Harvester"
