@@ -21,7 +21,7 @@ jobs:
         run: |
           chmod -R 777 .
           pip install --upgrade twarc
-          twarc2 --bearer-token "${{ secrets.BEARER_TOKEN }}" search "digital scholarship" >> results.json1
+          twarc2 --bearer-token "${{ secrets.BEARER_TOKEN }}" --consumer-key "${{ secrets.CONSUMER_KEY }}" --consumer-secret "${{ secrets.CONSUMER_SECRET }}" --access-token "${{ secrets.ACCESS_TOKEN }}" --access-token-secret "${{ secrets.ACCESS_TOKEN_SECRET }}" search "digital scholarship" >> results.json1
           echo "twarc has run"
 
       - name: Commit changes
