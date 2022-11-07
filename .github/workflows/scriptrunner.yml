@@ -21,6 +21,7 @@ jobs:
         run: |
           chmod -R 777 .
           pip install --upgrade twarc
-          twarc2 --bearer-token "AAAAAAAAAAAAAAAAAAAAAJBDAwEAAAAAYRBQMnYb123TK6Ua6zEjcGzLaGw%3D2S9L3Og2QOsLHIgKBGhh1DdjXz6c0UByn9IoEkvgimWmTrS7CO" search "digital scholarship" >> results.json
+          touch results.json1
+          twarc2 --bearer-token "AAAAAAAAAAAAAAAAAAAAAJBDAwEAAAAAYRBQMnYb123TK6Ua6zEjcGzLaGw%3D2S9L3Og2QOsLHIgKBGhh1DdjXz6c0UByn9IoEkvgimWmTrS7CO" search "digital scholarship" >> results.json1
           echo "twarc did a run"
           bash twarcscript.sh
