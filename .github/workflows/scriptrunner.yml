@@ -22,4 +22,5 @@ jobs:
           chmod -R 777 .
           ls -a
           pip install --upgrade twarc
+          twarc2 search "digital" testoutput.json
           bash twarcscript.sh
