@@ -1,1 +1,1 @@
-python -V
+python -h
