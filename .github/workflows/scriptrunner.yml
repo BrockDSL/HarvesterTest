@@ -20,5 +20,5 @@ jobs:
       - name: Run the script
         run: |
           chmod -R 777 .
-          ls
+          ls -a
           bash twarcscript.sh
