@@ -20,6 +20,7 @@ jobs:
       - name: Run the script
         run: |
           chmod -R 777 .
-          ls -a ..
+          pwd
+          ls -a
           pip install --upgrade twarc
           bash twarcscript.sh
