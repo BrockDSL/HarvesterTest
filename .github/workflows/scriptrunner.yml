@@ -20,7 +20,6 @@ jobs:
       - name: Run the script
         run: |
           chmod -R 777 .
-          ls -a
+          ls -a ..
           pip install --upgrade twarc
-          twarc2 search "digital" testoutput.json
           bash twarcscript.sh
