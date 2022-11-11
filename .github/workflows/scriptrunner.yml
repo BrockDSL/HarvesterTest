@@ -27,6 +27,7 @@ jobs:
           pip3 install --upgrade twarc-csv
           twarc2 --bearer-token "${{ secrets.BEARER_TOKEN }}" --consumer-key "${{ secrets.CONSUMER_KEY }}" --consumer-secret "${{ secrets.CONSUMER_SECRET }}" --access-token "${{ secrets.ACCESS_TOKEN }}" --access-token-secret "${{ secrets.ACCESS_TOKEN_SECRET }}" search "digital scholarship" >> results.json1
           twarc2 --bearer-token "${{ secrets.BEARER_TOKEN }}" --consumer-key "${{ secrets.CONSUMER_KEY }}" --consumer-secret "${{ secrets.CONSUMER_SECRET }}" --access-token "${{ secrets.ACCESS_TOKEN }}" --access-token-secret "${{ secrets.ACCESS_TOKEN_SECRET }}" csv results.json1 results.csv
+          ren "results.csv" "results-%date:~10,4%%date:~7,2%%date:~4,2%-%time:~0,2%%time:~3,2%.csv"
           echo "twarc has run"
 
       - name: Commit changes
