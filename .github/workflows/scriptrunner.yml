@@ -4,10 +4,8 @@ name: Script Runner
 
 
 on:
-  workflow_dispatch:
-  
   schedule:
-    - cron: "10 11 * * 5"
+    - cron: '30 12 * * 5'
 
 
 jobs:
