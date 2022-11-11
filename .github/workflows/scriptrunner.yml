@@ -5,6 +5,9 @@ name: Script Runner
 
 on:
   workflow_dispatch:
+  
+  schedule:
+    - cron: "5 23 * * 0"
 
 
 jobs:
