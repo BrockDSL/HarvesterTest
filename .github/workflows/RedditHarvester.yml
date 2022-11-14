@@ -1,0 +1,33 @@
+
+
+name: Reddit Harvester
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  runscript:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+
+      - name: Run the script
+        run: |
+          chmod -R 777 .
+          echo "Permissions have been updated"
+          pip install bdfr --upgrade
+          echo "BDFR has been installed"
+
+      - name: Commit changes
+        run: |
+          git config user.name 'DanielBrett'
+          git config user.email 'dbrett@brocku.ca'
+          git add .
+          git commit -m "Reddit Harvester has run"
+          git push

@@ -1,6 +1,6 @@
 
 
-name: Script Runner
+name: Weekly TWARC Harvester
 
 
 on:
@@ -37,5 +37,5 @@ jobs:
           git config user.name 'DanielBrett'
           git config user.email 'dbrett@brocku.ca'
           git add .
-          git commit -m "Harvester has run"
+          git commit -m "Twitter harvester has run"
           git push
