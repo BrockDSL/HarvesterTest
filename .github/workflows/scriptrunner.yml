@@ -23,8 +23,11 @@ jobs:
       - name: Run the script
         run: |
           chmod -R 777 .
+          echo "Permissions have been updated"
           pip install --upgrade twarc
+          echo "TWARC has been installed"
           pip3 install --upgrade twarc-csv
+          echo "TWARC CSV tool has been installed"
           twarc2 --bearer-token "${{ secrets.BEARER_TOKEN }}" --consumer-key "${{ secrets.CONSUMER_KEY }}" --consumer-secret "${{ secrets.CONSUMER_SECRET }}" --access-token "${{ secrets.ACCESS_TOKEN }}" --access-token-secret "${{ secrets.ACCESS_TOKEN_SECRET }}" search "digital scholarship" >> results.json1
           twarc2 --bearer-token "${{ secrets.BEARER_TOKEN }}" --consumer-key "${{ secrets.CONSUMER_KEY }}" --consumer-secret "${{ secrets.CONSUMER_SECRET }}" --access-token "${{ secrets.ACCESS_TOKEN }}" --access-token-secret "${{ secrets.ACCESS_TOKEN_SECRET }}" csv --allow-duplicates results.json1 results.csv
           echo "twarc has run"
