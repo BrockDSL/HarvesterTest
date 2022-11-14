@@ -23,6 +23,7 @@ jobs:
           echo "Permissions have been updated"
           pip install bdfr --upgrade
           echo "BDFR has been installed"
+          bdfr clone ./HarvestedReddits --subreddit technology
 
       - name: Commit changes
         run: |
