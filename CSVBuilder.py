@@ -4,5 +4,7 @@ import pandas as pd
 folder = 'HarvestedReddits/technology'
 
 for filename in os.listdir(folder):
-    filejson = pd.read_json(filename)
-    print(filejson)
+    filepath = os.path.join(folder, filename)
+    filejson = pd.read_json(filepath)
+    filejson.to_csv("newfile.csv", index=False)
+    print(pd.read_csv("newfile.csv"))
