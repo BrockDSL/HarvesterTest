@@ -24,7 +24,7 @@ jobs:
           pip install bdfr --upgrade
           pip install pandas
           echo "Dependencies has been installed"
-          python3 -m bdfr archive ./HarvestedReddits --subreddit technology -L 10
+          python3 -m bdfr archive --file-scheme {REDDITOR}_{POSTID} ./HarvestedReddits --subreddit technology -L 10
 
       - name: Commit changes
         run: |
