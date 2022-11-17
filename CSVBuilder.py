@@ -9,5 +9,3 @@ for filename in os.listdir(folder):
     newname = filename[0:-4:1]+"csv"
     filepath = os.path.join(folder, newname)
     filejson.to_csv(filepath, index=False)
-    print(filepath)
-    print(pd.read_csv(filepath))
