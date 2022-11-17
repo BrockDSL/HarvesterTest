@@ -25,6 +25,9 @@ jobs:
           pip install pandas
           echo "Dependencies has been installed"
           python3 -m bdfr archive --file-scheme {REDDITOR}_{POSTID} ./HarvestedReddits --subreddit technology -L 10
+          echo "Reddit Harvest Completed"
+          python3 CSVBuilder.py
+          echo "CSV Conversion completed"
 
       - name: Commit changes
         run: |
